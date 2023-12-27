@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.vh-75 {
+    height: 75vh;
+}
+
+
+/* ! Header  */
+header{
+    background-image: url("./../Assets/images/events-heavenly-header.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/* overlay */
+.head-layer {
+    background-color: rgba(4, 0, 255, 0.452);
+}
+
+
+
+/* ! Section 2 */
+.singers h3 {
+    margin: 0;
+    color: white;
+    cursor: pointer;
+}
+.singers div:not(.default) {
+    display: none;
+}
+
+/* ! Count Down Section */
+.countdown-section {
+    background-image: url("./../Assets/images/invitation-2508607__340.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+/* ! contact section */
+.douma {
+    width: 20px;
+    height: 20px;
+}
+
+.medias a , .fa-ul .fa-li{
+    color: black;
+    transition: 0.3s;
+}
+.medias a:hover , .fa-ul .fa-li:hover{
+    color: rgb(3,97,210);
+}
