@@ -1,3 +1,26 @@
+// ! Side Bar********
+let transDuration = 550;
+// sliding side bar
+let navWidth = $("#sideBar nav").innerWidth();
+let left = true;
+$("#sideBar").css("left", -navWidth);
+$("#gear").click(function () {
+  if (left) {
+    $("#sideBar").animate({ left: `-${navWidth}` }, transDuration);
+    left = false;
+  } else {
+    $("#sideBar").animate({ left: 0 }, transDuration);
+    left = true;
+  }
+});
+
+// nav anchors
+$("#sideBar nav div a").click(function () {
+  let aHref = $(this).attr("href");
+  let sectionTopOffset = $(aHref).offset().top;
+  $("html,body").animate({ scrollTop: sectionTopOffset }, transDuration);
+});
+
 // ! slide down section
 $(".singers div").not(".default").slideUp();
 $(".singers h3").click(function () {
@@ -40,7 +63,7 @@ let editBtn = document.getElementById("editBtn");
 let textAreaLimit = 100;
 textAreaIn.addEventListener("keyup", () => {
   textAreaLimit = 100 - textAreaIn.value.length;
-  setRemainingLengthToLimitVariable()
+  setRemainingLengthToLimitVariable();
   if (textAreaLimit <= 0 || textAreaIn.value.length == 100) {
     submitBtn.disabled = true;
     textAreaLimitViewer.innerText = "your available character finished";
@@ -49,10 +72,10 @@ textAreaIn.addEventListener("keyup", () => {
       submitBtn.disabled = false;
       textAreaIn.value = textAreaIn.value.substring(0, 99);
       textAreaLimit = 1;
-      setRemainingLengthToLimitVariable()
+      setRemainingLengthToLimitVariable();
     });
   }
 });
 function setRemainingLengthToLimitVariable() {
-    textAreaLimitViewer.innerText = textAreaLimit;
+  textAreaLimitViewer.innerText = textAreaLimit;
 }

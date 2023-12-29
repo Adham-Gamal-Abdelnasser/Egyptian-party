@@ -19,6 +19,19 @@ header{
     background-color: rgba(4, 0, 255, 0.452);
 }
 
+/* side bar */
+#sideBar {
+    display: flex;
+    z-index: 999999999;
+}
+
+#sideBar a {
+    color: white;
+}
+
+#sideBar .gear {
+    cursor: pointer;
+}
 
 
 /* ! Section 2 */
@@ -48,10 +61,10 @@ header{
     height: 20px;
 }
 
-.medias a , .fa-ul .fa-li{
+.medias a ,#contact .fa-ul .fa-li{
     color: black;
     transition: 0.3s;
 }
-.medias a:hover , .fa-ul .fa-li:hover{
+.medias a:hover ,#contact .fa-ul .fa-li:hover{
     color: rgb(3,97,210);
 }

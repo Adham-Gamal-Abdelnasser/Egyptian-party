@@ -14,7 +14,59 @@
     <link rel="stylesheet" href="CSS/main.css" />
   </head>
   <body>
-    <header class="min-vh-100 text-white">
+    <header id="home" class="min-vh-100 text-white position-relative">
+      <aside id="sideBar" class="position-fixed top-0 bottom-0">
+        <nav class="p-3 d-flex flex-column justify-content-between bg-black">
+          <div class="d-flex flex-column gap-3">
+            <a class="text-decoration-none" href="#home">Home</a>
+            <a class="text-decoration-none" href="#singers">Singers</a>
+            <a class="text-decoration-none" href="#countDown">Cont Down</a>
+            <a class="text-decoration-none mb-5" href="#contact">Contact</a>
+          </div>
+          <ul class="fa-ul ms-3">
+            <li class="my-4">
+              <span class="fa-li"
+                ><i class="fab fa-github text-primary"></i
+              ></span>
+              <a
+                class="text-decoration-none mt-5"
+                href="https://github.com/Adham-Gamal-Abdelnasser"
+                >Adham-Gamal-Abdelnasser</a
+              >
+            </li>
+            <li class="my-4">
+              <span class="fa-li"
+                ><i class="fab fa-linkedin-in text-primary"></i
+              ></span>
+              <a
+                class="text-decoration-none"
+                href="https://www.linkedin.com/in/adham-gamal-abdelnasser-%F0%9F%87%B5%F0%9F%87%B8-b47312225/"
+                >Adham Gamal Abdelnasser</a
+              >
+            </li>
+            <li class="my-4">
+              <span class="fa-li"
+                ><i class="fab fa-facebook-f text-primary"></i
+              ></span>
+              <a
+                class="text-decoration-none"
+                href="https://www.facebook.com/adham.gamal.9404/"
+                >Adham Abdelnasser</a
+              >
+            </li>
+            <li class="my-4"></li>
+          </ul>
+          <a
+            href="https://www.linkedin.com/in/adham-gamal-abdelnasser-%F0%9F%87%B5%F0%9F%87%B8-b47312225/"
+            class="douma d-flex justify-content-center align-items-center"
+            ><img src="Assets/logo.png" class="w-100"
+          /></a>
+        </nav>
+        <div id="gear" class="bg-primary align-self-center rounded-end-1 p-2">
+          <i class="fas fa-gear"></i>
+        </div>
+      </aside>
+
       <div
         class="head-layer d-flex flex-column gap-3 justify-content-center align-items-center w-100 min-vh-100"
       >
@@ -24,7 +76,8 @@
     </header>
 
     <section
-      class="d-flex justify-content-center align-items-center p-5 text-center "
+      class="d-flex justify-content-center align-items-center p-5 text-center"
+      id="singers"
     >
       <div class="singers w-50">
         <h3 class="p-2 bg-primary">Singer One</h3>
@@ -90,7 +143,7 @@
       </div>
     </section>
 
-    <section class="countdown-section">
+    <section id="countDown" class="countdown-section">
       <div class="container-fluid head-layer">
         <div
           class="row text-white h-100 d-flex p-5 justify-content-center flex-wrap"
@@ -130,7 +183,7 @@
       </div>
     </section>
 
-    <section class="p-5">
+    <section id="contact" class="p-5">
       <h2>Join Us</h2>
       <p class="text-muted lead mb-4 mt-2">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -189,11 +242,24 @@
               id="textAreaIn"
               placeholder="Message"
             ></textarea>
-            <p class="my-3"><span id="textAreaLimitViewer" class="text-danger">100</span> character remaining</p>
-            <button type="button" class="btn btn-primary px-3 py-1" id="submitBtn">
+            <p class="my-3">
+              <span id="textAreaLimitViewer" class="text-danger">100</span>
+              character remaining
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary px-3 py-1"
+              id="submitBtn"
+            >
               Submit
             </button>
-            <button type="button" id="editBtn" class="btn btn-warning px-3 py-1 d-none">Edit</button>
+            <button
+              type="button"
+              id="editBtn"
+              class="btn btn-warning px-3 py-1 d-none"
+            >
+              Edit
+            </button>
           </div>
         </div>
       </div>
